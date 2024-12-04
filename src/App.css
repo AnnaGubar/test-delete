@@ -5,6 +5,32 @@ ul {
 li {
   list-style: none;
 }
+
+h1 {
+  font-size: 16px;
+}
 .App {
   text-align: center;
+}
+
+.func {
+  font-size: 20px;
+  color: brown;
+}
+
+.class {
+  font-size: 20px;
+  color: #5b0ad3;
+}
+
+.counter,
+.list {
+  max-width: 200px;
+  margin: 20px auto;
+  padding: 10px;
+  outline: 1px solid #00ff84;
+}
+
+.list {
+  outline: 1px solid #ff00f7;
 }

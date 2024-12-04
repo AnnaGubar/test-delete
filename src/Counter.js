@@ -6,7 +6,7 @@ export const Counter = () => {
   const decrement = () => setCount((prevState) => prevState - 1);
 
   return (
-    <div>
+    <div className="counter">
       <p>{count}</p>
       <button onClick={increment} type="button">
         increment +
