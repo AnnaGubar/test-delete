@@ -19,6 +19,17 @@ export class MyClassComponent extends Component {
       this.setState({ todos: JSON.parse(lsTodos) });
     }
   }
+
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   if (this.props.count !== nextProps.count) {
+  //     console.log("2 updating - shouldComponentUpdate - no");
+  //     return true; // render compo-nt
+  //   }
+
+  //   console.log("2 updating - shouldComponentUpdate - yes");
+  //   return false; // not render compo-nt
+  // }
+
   componentDidUpdate(prevProps, prevState) {
     if (prevState.todos !== this.state.todos) {
       console.log("componentDidUpdate");
@@ -37,15 +48,23 @@ export class MyClassComponent extends Component {
     this.setState({ input: "" });
   };
 
-  componentWillUnmount() {
+  stopCounter = () => {
     clearInterval(this.intervalId);
-  }
+  };
+
+  // componentWillUnmount() {
+  //   clearInterval(this.intervalId);
+  // }
 
   render() {
     console.log("render");
     return (
       <div>
-        <h2>{this.state.timer}</h2>
+        <div className="counter">
+          <p>{this.state.timer}</p>
+          <button onClick={this.stopCounter}>Stop counter</button>
+        </div>
+
         <input value={this.state.input} onChange={this.onChangeHandler}></input>
         <button onClick={this.addTask}>Add todo</button>
         {this.state.todos.map((todo, index) => (
@@ -54,33 +73,4 @@ export class MyClassComponent extends Component {
       </div>
     );
   }
-
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     count: 1,
-  //   };
-
-  //   console.log("1 mounting - constructor");
-  // }
-
-  // componentDidMount() {
-  //   console.log("1 mounting - componentDidMount");
-  // }
-
-  // // returns only boolean value
-  // shouldComponentUpdate(nextProps, nextState) {
-  //   if (this.props.count !== nextProps.count) {
-  //     console.log("2 updating - shouldComponentUpdate - no");
-  //     return true; // render compo-nt
-  //   }
-
-  //   console.log("2 updating - shouldComponentUpdate - yes");
-  //   return false; // not render compo-nt
-  // }
-
-  // render() {
-  //   console.log("1 mounting - render");
-  //   return <div>MyClassComponent</div>;
-  // }
 }

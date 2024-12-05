@@ -3,6 +3,7 @@ import { ClassComponent } from "./Component";
 import { FuncComponent } from "./Component";
 import { Counter } from "./Counter";
 import { MyClassComponent } from "./MyClassComponent";
+import { Hooks } from "./Hooks";
 import "./App.css";
 
 const setRandom = () => Math.round(Math.random() * (1 - 0) + 0);
@@ -28,11 +29,13 @@ function App() {
       </header>
 
       <main>
-        <MyClassComponent />
+        <Hooks />
+
+        {/* <MyClassComponent /> */}
 
         <Counter />
 
-        <div className="list">
+        <div className="counter">
           <input onChange={onChangeHandler} value={input} />
           <ul>
             {item.map((el, index) => (

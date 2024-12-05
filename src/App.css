@@ -23,14 +23,9 @@ h1 {
   color: #5b0ad3;
 }
 
-.counter,
-.list {
+.counter {
   max-width: 200px;
   margin: 20px auto;
   padding: 10px;
   outline: 1px solid #00ff84;
-}
-
-.list {
-  outline: 1px solid #ff00f7;
 }
