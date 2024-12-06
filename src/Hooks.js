@@ -61,7 +61,7 @@ export function Hooks() {
 
   return (
     <div>
-      <div className="counter">
+      <div className="counter" style={{ background: "grey", fontSize: 10 }}>
         <SecondChildHook />
         {list.map((item, index) => {
           return <ChildHook key={index} item={item} />;

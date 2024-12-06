@@ -5,6 +5,7 @@ import { Counter } from "./Counter";
 import { MyClassComponent } from "./MyClassComponent";
 import { Hooks } from "./Hooks";
 import "./App.css";
+import Form from "./Form/Form";
 
 const setRandom = () => Math.round(Math.random() * (1 - 0) + 0);
 
@@ -29,12 +30,10 @@ function App() {
       </header>
 
       <main>
+        <Form />
         <Hooks />
-
         {/* <MyClassComponent /> */}
-
         <Counter />
-
         <div className="counter">
           <input onChange={onChangeHandler} value={input} />
           <ul>

@@ -7,10 +7,12 @@ li {
 }
 
 h1 {
+  margin: 0;
   font-size: 16px;
 }
 .App {
   text-align: center;
+  background-color: rgb(176, 90, 107);
 }
 
 .func {
@@ -25,7 +27,7 @@ h1 {
 
 .counter {
   max-width: 200px;
-  margin: 20px auto;
+  margin: 20px auto 0;
   padding: 10px;
   outline: 1px solid #00ff84;
 }
