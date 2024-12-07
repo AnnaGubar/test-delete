@@ -1,0 +1,29 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "Pankaj",
+      "salary": "10000"
+    },
+    {
+      "name": "David",
+      "salary": "5000",
+      "id": "2"
+    },
+    {
+      "name": "Mike",
+      "salary": "1760",
+      "id": "3"
+    },
+    {
+      "name": "Tanya",
+      "salary": "4480",
+      "id": "4"
+    },
+    {
+      "id": "2584",
+      "name": "FetchQuery",
+      "salary": "1565"
+    }
+  ]
+}

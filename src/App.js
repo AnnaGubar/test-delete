@@ -4,8 +4,10 @@ import { FuncComponent } from "./Component";
 import { Counter } from "./Counter";
 import { MyClassComponent } from "./MyClassComponent";
 import { Hooks } from "./Hooks";
-import "./App.css";
+import { Fetch } from "./Fetch";
+import FetchQuery from "./FetchQuery";
 import Form from "./Form/Form";
+import "./App.css";
 
 const setRandom = () => Math.round(Math.random() * (1 - 0) + 0);
 
@@ -45,6 +47,9 @@ function App() {
           </ul>
           <button onClick={onClickHandler}>Add new element</button>
         </div>
+
+        <Fetch />
+        <FetchQuery />
       </main>
     </div>
   );
